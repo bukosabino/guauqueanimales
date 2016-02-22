@@ -17,9 +17,10 @@ FROM_ADMIN_EMAIL = ['example1@gmail.com', 'example2@gmail.com',]
 SECRET_KEY = 'key_example'
 
 
+
 ## Twitter settings:
 
-for send tweets, i use this python wrapper API Twitter: https://github.com/ryanmcgrath/twython
+for send tweets, guauqueanimales uses this python wrapper API Twitter: https://github.com/ryanmcgrath/twython
 
 from twython import Twython
 
