@@ -1,0 +1,711 @@
+{% load bootstrap_tags %}
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Perros, Gatos, En Adopción, En Acogida, Perdidos, Encontrados, Perros en adopción, Gatos en adopción, Guau! qué perros, Guau! qué animales" />
+    <meta name="description" content="Guau! qué animales es una plataforma orientada a ayudar a animales en adopción, en proceso de acogida o perdidos encuentren el hogar que se merecen. Su uso es totalmente gratuito." />
+    <meta name="author" content="Bukosabino">
+    <meta property="fb:app_id" content="439706836229953" />
+    <meta property="og:title" content="Guau! qué animales" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://guauqueanimales.com" />
+    <meta property="og:image" content="http://guauqueanimales.com{{ STATIC_URL }}startbootstrap-agency-1.0.4/img/header-bg4.jpg" />
+    <meta property="og:description" content="Guau! qué animales es una plataforma orientada a ayudar a animales en adopción, en proceso de acogida o perdidos encuentren el hogar que se merecen. Su uso es totalmente gratuito." />
+
+
+    <title>Guau! qué animales</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ STATIC_URL }}startbootstrap-agency-1.0.4/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="{{ STATIC_URL }}startbootstrap-agency-1.0.4/img/icon2.png"/>
+    <!-- Custom CSS -->
+    <link href="{{ STATIC_URL }}startbootstrap-agency-1.0.4/css/agency.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}startbootstrap-agency-1.0.4/css/style.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="{{ STATIC_URL }}startbootstrap-agency-1.0.4/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll hidden-sm" href="{% url 'index' %}">Guau! qué animales</a>
+                <a class="navbar-brand page-scroll visible-sm" href="{% url 'index' %}">Guau!</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#list">¿Buscas un animal?</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#new">Añadir un animal</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#philosophy">Filosofía</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Plataforma para ayudar a los animales en adopción o perdidos</div>
+                <div class="intro-heading">Dando voz a los sin voz</div>
+
+                <a href="#list" class="page-scroll btn btn-xl"> <span class="glyphicon glyphicon-search" aria-hidden="true"> </span> Ver animales</a>
+
+                    <div class="visible-xs" style="margin: 20px"></div>
+
+
+                <a href="#new" class="page-scroll btn btn-xl"> <span class="glyphicon glyphicon-plus" aria-hidden="true"> </span> Añade un animal</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="list" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">¿Buscas un animal?</h2>
+                    <h3 class="section-subheading text-muted">Existen 4 categorías de animales en la plataforma: en adopción, en acogida, perdidos o encontrados.</h3>
+                </div>
+            </div>
+
+            <!-- MOBILE VERSION -->
+            <div class="row visible-sm visible-xs" style="overflow: auto">
+                <div class="col-xs-12" style="white-space: nowrap;">
+                    <h4 class="service-heading">Animales en Adopción</h4>
+                    <div class="ul_dogs">
+                    <ul class="list-group" style="white-space: nowrap;">
+                    {% if not adopteds %}
+                    <p style="color:#777">No hay ningún animal en adopción actualmente en la base de datos. <a href="#new">¿Quieres añadir uno?</a></p>
+                    {% endif %}
+                    {% for dog in adopteds %}
+                        <li class="list-group-item" style="display: inline-block; height: 130px; width: 160px;">
+                            <div class="row">
+                                <a href="{% url 'detail' dog.id %}" class="list-dogs">
+                                    <div class="col-xs-12">
+                                        <img class="img-responsive img-centered" src="{{dog.thumbnail_url}}" style="height:70px;"></img>
+                                    </div>
+                                    <div class="col-xs-12">
+
+                                        {% if dog.name %}
+                                            <h6 style="font-size: 12px; margin-top: 8px; margin-bottom: 5px;">{{ dog.name|truncatechars:18 }}</h6>
+                                        {% else %}
+                                            <h6 style="font-size: 12px; margin-top: 8px; margin-bottom: 5px;">Sin nombre</h6>
+                                        {% endif %}
+
+                                        {% if dog.state != 'Otro' %}
+                                            <p style="font-size: 9px;">{{dog.state}}</p>
+                                        {% endif %}
+
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                    </div>
+                </div>
+
+                <div class="col-xs-12" style="white-space: nowrap;">
+                    <h4 class="service-heading">Animales en Acogida</h4>
+                    <div class="ul_dogs">
+                    <ul class="list-group" style="white-space: nowrap;">
+                    {% if not receptions %}
+                    <p style="color:#777">No hay ningún animal en acogida actualmente en la base de datos. <a href="#new">¿Quieres añadir uno?</a></p>
+                    {% endif %}
+                    {% for dog in receptions %}
+                        <li class="list-group-item" style="display: inline-block; height: 130px; width: 160px;">
+                            <div class="row">
+                                <a href="{% url 'detail' dog.id %}" class="list-dogs">
+                                    <div class="col-xs-12">
+                                        <img class="img-responsive img-centered" src="{{dog.thumbnail_url}}" style="height:70px;"></img>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        {% if dog.name %}
+                                            <h6 style="font-size: 12px; margin-top: 8px; margin-bottom: 5px;">{{ dog.name|truncatechars:18 }}</h6>
+                                        {% else %}
+                                            <h6 style="font-size: 12px; margin-top: 8px; margin-bottom: 5px;">Sin nombre</h6>
+                                        {% endif %}
+                                        {% if dog.state != 'Otro' %}
+                                            <p style="font-size: 9px;">{{dog.state}}</p>
+                                        {% endif %}
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-xs-12" style="white-space: nowrap;">
+                    <h4 class="service-heading">Animales Perdidos</h4>
+                    <div class="ul_dogs">
+                    <ul class="list-group" style="white-space: nowrap;">
+                    {% if not losteds %}
+                    <p style="color:#777">No hay ningún animal perdido actualmente en la base de datos. <a href="#new">¿Quieres añadir uno?</a></p>
+                    {% endif %}
+                    {% for dog in losteds %}
+                        <li class="list-group-item" style="display: inline-block; height: 130px; width: 160px;">
+                            <div class="row">
+                                <a href="{% url 'detail' dog.id %}" class="list-dogs">
+                                    <div class="col-xs-12">
+                                        <img class="img-responsive img-centered" src="{{dog.thumbnail_url}}" style="height:70px;"></img>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        {% if dog.name %}
+                                            <h6 style="font-size: 12px; margin-top: 8px; margin-bottom: 5px;">{{ dog.name|truncatechars:18 }}</h6>
+                                        {% else %}
+                                            <h6 style="font-size: 12px; margin-top: 8px; margin-bottom: 5px;">Sin nombre</h6>
+                                        {% endif %}
+                                        {% if dog.state != 'Otro' %}
+                                            <p style="font-size: 9px;">{{dog.state}}</p>
+                                        {% endif %}
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-xs-12" style="white-space: nowrap;">
+                    <h4 class="service-heading">Animales Encontrados</h4>
+                    <div class="ul_dogs">
+                    <ul class="list-group" style="white-space: nowrap;">
+                    {% if not findeds %}
+                    <p style="color:#777">No hay ningún animal encontrado actualmente en la base de datos. <a href="#new">¿Quieres añadir uno?</a></p>
+                    {% endif %}
+                    {% for dog in findeds %}
+                        <li class="list-group-item" style="display: inline-block; height: 130px; width: 160px;">
+                            <div class="row">
+                                <a href="{% url 'detail' dog.id %}" class="list-dogs">
+                                    <div class="col-xs-12">
+                                        <img class="img-responsive img-centered" src="{{dog.thumbnail_url}}" style="height:70px;"></img>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        {% if dog.name %}
+                                            <h6 style="font-size: 12px; margin-top: 8px; margin-bottom: 5px;">{{ dog.name|truncatechars:18 }}</h6>
+                                        {% else %}
+                                            <h6 style="font-size: 12px; margin-top: 8px; margin-bottom: 5px;">Sin nombre</h6>
+                                        {% endif %}
+                                        {% if dog.state != 'Otro' %}
+                                            <p style="font-size: 9px;">{{dog.state}}</p>
+                                        {% endif %}
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- DESKTOP VERSION -->
+            <div class="row hidden-sm hidden-xs">
+                <div class="col-lg-3 col-sm-6">
+                    <h4 class="service-heading">Animales en Adopción</h4>
+                    <div class="ul_dogs">
+                    <ul class="list-group">
+                    {% if not adopteds %}
+                    <p style="color:#777">No hay ningún animal en adopción actualmente en la base de datos. <a href="#new">¿Quieres añadir uno?</a></p>
+                    {% endif %}
+                    {% for dog in adopteds %}
+                        <li class="list-group-item">
+                            <div class="row">
+                                <a href="{% url 'detail' dog.id %}" class="list-dogs">
+                                    <div class="col-xs-4">
+                                        <img class="img-responsive img-centered" src="{{dog.thumbnail_url}}"></img>
+                                    </div>
+                                    <div class="col-xs-8">
+
+                                        {% if dog.name %}
+                                            <h4>{{dog.name}}</h4>
+                                        {% else %}
+                                            <h4>Sin nombre</h4>
+                                        {% endif %}
+
+                                        {% if dog.state != 'Otro' %}
+                                            <p>{{dog.state}}</p>
+                                        {% endif %}
+
+                                        {% if dog.city != '' %}
+                                            <p>{{dog.city}}</p>
+                                        {% endif %}
+
+                                        {% if dog.town != '' %}
+                                            <p>{{dog.town}}</p>
+                                        {% endif %}
+
+                                        {% if dog.age != '' %}
+                                            <p>{{dog.age}}</p>
+                                        {% endif %}
+
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-sm-6">
+                    <h4 class="service-heading">Animales en Acogida</h4>
+                    <div class="ul_dogs">
+                    <ul class="list-group">
+                    {% if not receptions %}
+                    <p style="color:#777">No hay ningún animal en acogida actualmente en la base de datos. <a href="#new">¿Quieres añadir uno?</a></p>
+                    {% endif %}
+                    {% for dog in receptions %}
+                        <li class="list-group-item">
+                            <div class="row">
+                                <a href="{% url 'detail' dog.id %}" class="list-dogs">
+                                    <div class="col-xs-4">
+                                        <img class="img-responsive img-centered" src="{{dog.thumbnail_url}}"></img>
+                                    </div>
+                                    <div class="col-xs-8">
+
+                                        {% if dog.name %}
+                                            <h4>{{dog.name}}</h4>
+                                        {% else %}
+                                            <h4>Sin nombre</h4>
+                                        {% endif %}
+
+                                        {% if dog.state != 'Otro' %}
+                                            <p>{{dog.state}}</p>
+                                        {% endif %}
+
+                                        {% if dog.city != '' %}
+                                            <p>{{dog.city}}</p>
+                                        {% endif %}
+
+                                        {% if dog.town != '' %}
+                                            <p>{{dog.town}}</p>
+                                        {% endif %}
+
+                                        {% if dog.age != '' %}
+                                            <p>{{dog.age}}</p>
+                                        {% endif %}
+
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-sm-6">
+                    <h4 class="service-heading">Animales Perdidos</h4>
+                    <div class="ul_dogs">
+                    <ul class="list-group">
+                    {% if not losteds %}
+                    <p style="color:#777">No hay ningún animal perdido actualmente en la base de datos. <a href="#new">¿Quieres añadir uno?</a></p>
+                    {% endif %}
+                    {% for dog in losteds %}
+                        <li class="list-group-item">
+                            <div class="row">
+                                <a href="{% url 'detail' dog.id %}" class="list-dogs">
+                                    <div class="col-xs-4">
+                                        <img class="img-responsive img-centered" src="{{dog.thumbnail_url}}"></img>
+                                    </div>
+                                    <div class="col-xs-8">
+
+                                        {% if dog.name %}
+                                            <h4>{{dog.name}}</h4>
+                                        {% else %}
+                                            <h4>Sin nombre</h4>
+                                        {% endif %}
+
+                                        {% if dog.state != 'Otro' %}
+                                            <p>{{dog.state}}</p>
+                                        {% endif %}
+
+                                        {% if dog.city != '' %}
+                                            <p>{{dog.city}}</p>
+                                        {% endif %}
+
+                                        {% if dog.town != '' %}
+                                            <p>{{dog.town}}</p>
+                                        {% endif %}
+
+                                        {% if dog.age != '' %}
+                                            <p>{{dog.age}}</p>
+                                        {% endif %}
+
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-sm-6">
+                    <h4 class="service-heading">Animales Encontrados</h4>
+                    <div class="ul_dogs">
+                    <ul class="list-group">
+                    {% if not findeds %}
+                    <p style="color:#777">No hay ningún animal encontrado actualmente en la base de datos. <a href="#new">¿Quieres añadir uno?</a></p>
+                    {% endif %}
+                    {% for dog in findeds %}
+                        <li class="list-group-item">
+                            <div class="row">
+                                <a href="{% url 'detail' dog.id %}" class="list-dogs">
+                                    <div class="col-xs-4">
+                                        <img class="img-responsive img-centered" src="{{dog.thumbnail_url}}"></img>
+                                    </div>
+                                    <div class="col-xs-8">
+
+                                        {% if dog.name %}
+                                            <h4>{{dog.name}}</h4>
+                                        {% else %}
+                                            <h4>Sin nombre</h4>
+                                        {% endif %}
+
+                                        {% if dog.state != 'Otro' %}
+                                            <p>{{dog.state}}</p>
+                                        {% endif %}
+
+                                        {% if dog.city != '' %}
+                                            <p>{{dog.city}}</p>
+                                        {% endif %}
+
+                                        {% if dog.town != '' %}
+                                            <p>{{dog.town}}</p>
+                                        {% endif %}
+
+                                        {% if dog.age != '' %}
+                                            <p>{{dog.age}}</p>
+                                        {% endif %}
+
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="new">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Añadir un animal</h2>
+                    <h3 class="section-subheading text-muted">Selecciona la categoría en la que deseas añadir el animal: en adopción, en acogida, perdido o encontrado.</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <select name="race" id="select_type" class=" form-control">
+                    <option {% if option_selected == 'adopted' %} selected="selected" {% endif %} value="adopted">En adopción</option>
+                    <option {% if option_selected == 'recepted' %} selected="selected" {% endif %} value="recepted">En acogida</option>
+                    <option {% if option_selected == 'finded' %} selected="selected" {% endif %} value="finded">Encontrado</option>
+                    <option {% if option_selected == 'losted' %} selected="selected" {% endif %} value="losted">Perdido</option>
+                </select>
+            </div>
+            <br />
+
+            <div id="form_adopted" class="row hidden">
+                <form action="{% url 'new_dog_adopted' %}" method="post" enctype="multipart/form-data">
+                    <legend>Nuevo perro en adopción</legend>
+                    {% csrf_token %}
+                    {{ form_adopted|as_bootstrap }}
+                    <div class="form-actions">
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="form_recepted" class="row hidden">
+                <form action="{% url 'new_dog_recepted' %}" method="post" enctype="multipart/form-data">
+                    <legend>Nuevo perro en acogida</legend>
+                    {% csrf_token %}
+                    {{ form_recepted|as_bootstrap }}
+                    <div class="form-actions">
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="form_finded" class="row hidden">
+                <form action="{% url 'new_dog_finded' %}" method="post" enctype="multipart/form-data">
+                    <legend>Nuevo perro encontrado</legend>
+                    {% csrf_token %}
+                    {{ form_finded|as_bootstrap }}
+                    <div class="form-actions">
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                     </div>
+                </form>
+            </div>
+
+            <div id="form_losted" class="row hidden">
+                <form action="{% url 'new_dog_losted' %}" method="post" enctype="multipart/form-data">
+                    <legend>Nuevo perro perdido</legend>
+                    {% csrf_token %}
+                    {{ form_losted|as_bootstrap }}
+                    <div class="form-actions">
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="philosophy" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Nuestra Filosofía</h2>
+                    <h3 class="section-subheading text-muted"> Dando voz a los sin voz </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="large text-muted">Cada día miles de animales son abandonados, robados o se pierden. ¿Por qué no hacer una base de datos común que ponga en contacto a personas y animales que se buscan? ¿Por qué no dar voz a los sin voz?</p>
+
+                    <p class="large text-muted">Guau! qué animales es una plataforma orientada a ayudar a animales en adopción, en proceso de acogida o perdidos encuentren el hogar que se merecen. Su uso es totalmente gratuito. Además de esta web también disponemos de <a href="https://play.google.com/store/apps/details?id=com.ionicframework.buscaperrocliente620403" target="_blank">una aplicación Android</a>.</p>
+
+                    <p class="large text-muted">Distinguimos 4 categorías 'En adopción', 'En Acogida' 'Perdidos' y 'Encontrados'. Y se puede filtrar por países y ciudades. Además se puede compartir con un 'click' en cualquier red social.</p>
+
+                    <p class="large text-muted">Celebramos que entidades importantes en el mundo animal como PACMA ( <a href="http://blog.pacma.es/2015/guau-que-perros-la-nueva-aplicacion-para-adoptar-animales/" target="_blank">mediante entrevista para su blog</a> ) o Baldea ( <a href="http://www.baldea.org/biblioteca/audios/" target="_blank">mediante entrevista para su programa de radio en IB3 Radio</a> ) nos hayan mostrado todo su apoyo y dado cobertura. El trabajo en equipo es importantísimo si queremos crear conciencia.</p>
+
+                    <p class="large text-muted">La financiación de este proyecto es nula, sin embargo existen costes de mantenimiento, de desarrollo y un sin fín de esfuerzos para conectar cada día con más personas y animales. Si quieres colaborar económicamente puedes hacerlo en forma <a href="https://paypal.me/guau/3" target="_blank">de donación</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+
+            {% block messages %}
+                {% if messages %}
+                    {% for message in messages %}
+                        {% if message.tags == 'error' %}
+                            <div class="alert alert-danger">
+                                <a class="close" data-dismiss="alert">×</a>
+                                {{ message|safe }}
+                            </div>
+
+                        {% else %}
+                            <div class="alert alert-{{ message.tags }}">
+                                <a class="close" data-dismiss="alert">×</a>
+                                {{ message|safe }}
+                            </div>
+                        {% endif %}
+
+                    {% endfor %}
+                {% endif %}
+            {% endblock %}
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contacto</h2>
+                    <h3 class="section-subheading text-muted">¿Tiene alguna duda? ¿Desea colaborar y no sabe cómo hacerlo? Envíenos un email y contestaremos tan pronto como sea posible</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form action="{% url 'contact' %}" method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" value="{{form_contact.name}}" name="name" placeholder="Nombre" id="name" data-validation-required-message="Introduzca su nombre por favor.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="Correo electrónico *" id="email" value="{{form_contact.email}}" required data-validation-required-message="Introduzca un correo electrónico para contacto por favor.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" value="{{form_contact.phone}}" name="phone" placeholder="Teléfono" id="phone" data-validation-required-message="Introzca un número de teléfono por favor.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" name="message" placeholder="Mensaje.. *" id="message" required data-validation-required-message="Introduzca un mensaje por favor.">{{form_contact.message}}</textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-xl">Enviar Mensaje</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Guau! qué animales 2015</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="https://twitter.com/guauqueperros" target="_blank"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="https://www.facebook.com/guauqueperros" target="_blank"><i class="fa fa-facebook"></i></a>
+                        </li>
+
+                        <li><a href="https://play.google.com/store/apps/details?id=com.ionicframework.buscaperrocliente620403" target="_blank"><i class="fa fa-android"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="https://play.google.com/store/apps/details?id=com.ionicframework.buscaperrocliente620403" target="_blank">App Android</a>
+                        </li>
+                        <li style='color: #fed136;'> | </li>
+                        <li><a href="https://paypal.me/guau/3" target="_blank">¿Una donación económica?</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{{ STATIC_URL }}startbootstrap-agency-1.0.4/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ STATIC_URL }}startbootstrap-agency-1.0.4/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="{{ STATIC_URL }}startbootstrap-agency-1.0.4/js/classie.js"></script>
+    <script src="{{ STATIC_URL }}startbootstrap-agency-1.0.4/js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="{{ STATIC_URL }}startbootstrap-agency-1.0.4/js/jqBootstrapValidation.js"></script>
+    <script src="{{ STATIC_URL }}startbootstrap-agency-1.0.4/js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{{ STATIC_URL }}startbootstrap-agency-1.0.4/js/agency.js"></script>
+
+<script>
+
+    // This is a functions that scrolls to #{blah}link
+    function goToByScroll(id){
+          // Remove "link" from the ID
+        id = id.replace("link", "");
+          // Scroll
+
+        var aux = 0;
+
+        if(id=="contact"){
+            aux = 1200;
+        } else if (id=="philosophy"){
+            aux = 1200;
+        }
+
+        $('html,body').animate({
+            scrollTop: $("#"+id).offset().top+aux},
+            'slow');
+    }
+
+    $(function() {
+
+        {% if form_adopted.errors or form_recepted.errors or form_finded.errors or form_losted.errors %}
+            goToByScroll("new");
+        {% endif %}
+
+        {% if section_name %}
+            goToByScroll("{{section_name}}");
+        {% endif %}
+
+        $('#select_type').on('change', function() {
+
+            $("#form_adopted").addClass('hidden');
+            $("#form_recepted").addClass('hidden');
+            $("#form_finded").addClass('hidden');
+            $("#form_losted").addClass('hidden');
+
+            $("#form_"+this.value).removeClass('hidden');
+
+        });
+
+        $("#form_"+"{{option_selected}}").removeClass('hidden');
+
+        // Eliminando estilo bootstrap para el campo imagen
+        $('input#id_image').removeClass('form-control');
+
+        // Dando estilo bootstrap a los campos con errores
+        $('.error-msg').html('<div style="margin-top: 10px;" class="alert alert-danger">Este campo es obligatorio</div>');
+
+    });
+
+</script>
+
+</body>
+
+</html>

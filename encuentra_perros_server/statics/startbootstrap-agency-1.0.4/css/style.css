@@ -1,0 +1,22 @@
+
+/*
+Estilo para el listado de perros
+*/
+
+.list-dogs{
+	color: #777;
+}
+
+a.list-dogs div h4{
+	margin: 5px 0px 5px 0px; 
+	/*color: #333;*/
+}
+
+a.list-dogs div p{
+	margin: 0px;
+}
+
+.ul_dogs{
+	max-height: 550px;
+	overflow:auto;
+}

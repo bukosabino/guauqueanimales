@@ -1,0 +1,8 @@
+django==1.7.3
+djangorestframework==3.0.3
+pillow==2.7.0
+six==1.9.0
+easy-thumbnails==2.2
+mysql-python
+twython
+django-forms-bootstrap
