@@ -36,8 +36,9 @@ TWITTER = Twython(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECR
 
 
 
-## Local set up:
+## Deploy local:
 
+* git clone https://github.com/bukosabino/guauqueanimales.git
 * pip install -r requirements.txt
 * python manage.py migrate
 * python manage.py runserver
